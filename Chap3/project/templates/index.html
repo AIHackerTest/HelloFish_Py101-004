@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<title>城市天气查询系统</title>
+<body>
+
+<h1 style="text-align:center">欢迎使用城市天气查询系统！</h1><br>
+<div style="text-align:center"><img src="{{url_for('static',filename='pic.png')}}" 
+alt=weather_logo width="200" height="200" /> </div>
+    <form style="text-align:center" action="/user_request" method="GET"> 
+    请输入要查询的城市：
+                 <input type="text" name="city"> <br>
+                 <input type="submit" name="query" value="查询">
+                 <input type="submit" name="history" value="历史">
+                 <input type="submit" name="help" value="帮助">
+    </form>
+    {% block content %}
+    {% endblock %}
+</body>
+ 
+</html>

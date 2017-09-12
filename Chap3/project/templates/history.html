@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+{% block content %}
+<p style="text-align:center" >
+{% for line in history_list %}
+{{ line }} <br>
+{% endfor %}
+</p>
+{% endblock %}
